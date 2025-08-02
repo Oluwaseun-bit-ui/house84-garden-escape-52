@@ -1,12 +1,42 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import ServicesSection from "@/components/ServicesSection";
+import LocationsSection from "@/components/LocationsSection";
+import RoomFeaturesSection from "@/components/RoomFeaturesSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import GallerySection from "@/components/GallerySection";
+import ContactSection from "@/components/ContactSection";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      {/* Hero Section */}
+      <HeroSection />
+      
+      {/* About Section */}
+      <AboutSection />
+      
+      {/* Services Section */}
+      <ServicesSection />
+      
+      {/* Locations Section */}
+      <LocationsSection />
+      
+      {/* Room Features Section */}
+      <RoomFeaturesSection />
+      
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+      
+      {/* Gallery Section */}
+      <GallerySection />
+      
+      {/* Contact Section */}
+      <ContactSection />
+      
+      {/* Floating WhatsApp Button */}
+      <FloatingWhatsApp />
     </div>
   );
 };
