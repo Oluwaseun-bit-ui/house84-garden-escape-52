@@ -4,6 +4,10 @@ import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import LocationsSection from "@/components/LocationsSection";
 import RoomFeaturesSection from "@/components/RoomFeaturesSection";
+import EventsSection from "@/components/EventsSection";
+import BarLoungeSection from "@/components/BarLoungeSection";
+import RecreationSection from "@/components/RecreationSection";
+import PoolSection from "@/components/PoolSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import GallerySection from "@/components/GallerySection";
 import ContactSection from "@/components/ContactSection";
@@ -29,6 +33,18 @@ const Index = () => {
       
       {/* Room Features Section */}
       <RoomFeaturesSection />
+      
+      {/* Events Section */}
+      <EventsSection />
+      
+      {/* Bar & Lounge Section */}
+      <BarLoungeSection />
+      
+      {/* Recreation Section */}
+      <RecreationSection />
+      
+      {/* Pool Section */}
+      <PoolSection />
       
       {/* Testimonials Section */}
       <TestimonialsSection />

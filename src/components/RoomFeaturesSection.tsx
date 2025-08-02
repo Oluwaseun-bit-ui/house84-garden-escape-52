@@ -11,7 +11,8 @@ import {
   Car
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import luxuryRoom from "@/assets/luxury-room.jpg";
+import luxuryRoomBlue from "@/assets/luxury-room-blue.jpg";
+import luxuryRoomGold from "@/assets/luxury-room-gold.jpg";
 
 const RoomFeaturesSection = () => {
   const features = [
@@ -83,22 +84,19 @@ const RoomFeaturesSection = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Room Image */}
+            {/* Room Images */}
             <div className="order-2 lg:order-1">
-              <div 
-                className="h-96 lg:h-[500px] bg-cover bg-center rounded-3xl shadow-elegant"
-                style={{ backgroundImage: `url(${luxuryRoom})` }}
-              >
-                <div className="h-full bg-gradient-to-t from-background/80 via-transparent to-transparent rounded-3xl flex items-end p-8">
-                  <div className="text-white">
-                    <h3 className="text-2xl font-display font-bold mb-2">
-                      Modern Comfort
-                    </h3>
-                    <p className="text-lg opacity-90">
-                      Where luxury meets functionality
-                    </p>
-                  </div>
-                </div>
+              <div className="grid grid-cols-1 gap-4 h-96 lg:h-[500px]">
+                <img 
+                  src={luxuryRoomBlue} 
+                  alt="Luxury hotel room with blue ambient lighting and modern amenities" 
+                  className="w-full h-48 object-cover rounded-3xl shadow-elegant"
+                />
+                <img 
+                  src={luxuryRoomGold} 
+                  alt="Luxury hotel room with gold accents and elegant decor" 
+                  className="w-full h-48 object-cover rounded-3xl shadow-elegant"
+                />
               </div>
             </div>
 
