@@ -13,6 +13,9 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import luxuryRoomBlue from "@/assets/luxury-room-blue.jpg";
 import luxuryRoomGold from "@/assets/luxury-room-gold.jpg";
+import premiumRoom1 from "@/assets/premium-room-1.jpg";
+import premiumRoom2 from "@/assets/premium-room-2.jpg";
+import premiumRoom3 from "@/assets/premium-room-3.jpg";
 
 const RoomFeaturesSection = () => {
   const features = [
@@ -84,19 +87,40 @@ const RoomFeaturesSection = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Room Images */}
+            {/* Premium Room Gallery */}
             <div className="order-2 lg:order-1">
-              <div className="grid grid-cols-1 gap-4 h-96 lg:h-[500px]">
-                <img 
-                  src={luxuryRoomBlue} 
-                  alt="Luxury hotel room with blue ambient lighting and modern amenities" 
-                  className="w-full h-48 object-cover rounded-3xl shadow-elegant"
-                />
-                <img 
-                  src={luxuryRoomGold} 
-                  alt="Luxury hotel room with gold accents and elegant decor" 
-                  className="w-full h-48 object-cover rounded-3xl shadow-elegant"
-                />
+              <div className="grid grid-cols-2 lg:grid-cols-1 gap-3 lg:h-[600px]">
+                <div className="col-span-2 lg:col-span-1">
+                  <img 
+                    src={premiumRoom1} 
+                    alt="Premium room with elegant decor and ambient lighting" 
+                    className="w-full h-48 lg:h-40 object-cover rounded-2xl shadow-elegant"
+                  />
+                </div>
+                <div className="grid grid-cols-2 gap-3 col-span-2 lg:col-span-1">
+                  <img 
+                    src={premiumRoom2} 
+                    alt="Modern bedroom with blue ambient lighting" 
+                    className="w-full h-32 lg:h-36 object-cover rounded-2xl shadow-elegant"
+                  />
+                  <img 
+                    src={premiumRoom3} 
+                    alt="Comfortable room with modern amenities" 
+                    className="w-full h-32 lg:h-36 object-cover rounded-2xl shadow-elegant"
+                  />
+                </div>
+                <div className="grid grid-cols-2 gap-3 col-span-2 lg:col-span-1">
+                  <img 
+                    src={luxuryRoomBlue} 
+                    alt="Luxury hotel room with blue ambient lighting" 
+                    className="w-full h-32 lg:h-36 object-cover rounded-2xl shadow-elegant"
+                  />
+                  <img 
+                    src={luxuryRoomGold} 
+                    alt="Luxury hotel room with gold accents" 
+                    className="w-full h-32 lg:h-36 object-cover rounded-2xl shadow-elegant"
+                  />
+                </div>
               </div>
             </div>
 
