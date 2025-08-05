@@ -1,10 +1,31 @@
 import { Wine, Coffee, Users, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import barSelection from "@/assets/bar-selection.jpg";
 import fingerFood from "@/assets/finger-food.jpg";
 
 const BarLoungeSection = () => {
+  const barImages = [
+    {
+      src: barSelection,
+      alt: "Premium bar selection with various spirits and cocktails",
+      title: "Premium Selection",
+      description: "Curated spirits & cocktails"
+    },
+    {
+      src: fingerFood,
+      alt: "Delicious finger foods and appetizers served at our lounge",
+      title: "Tasty Bites", 
+      description: "Affordable & delicious"
+    }
+  ];
   return (
     <section id="bar" className="py-20 bg-gradient-to-br from-accent/5 to-primary/5">
       <div className="container mx-auto px-4">
@@ -19,60 +40,39 @@ const BarLoungeSection = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
-            {/* Bar Selection */}
-            <Card className="group overflow-hidden">
-              <div className="relative">
-                <img 
-                  src={barSelection} 
-                  alt="Premium bar selection with various spirits and cocktails" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent flex items-end p-6">
-                  <div className="text-white">
-                    <h3 className="text-xl font-display font-bold mb-1">
-                      Premium Selection
-                    </h3>
-                    <p className="opacity-90">
-                      Curated spirits & cocktails
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <p className="text-muted-foreground leading-relaxed">
-                  From premium whiskeys to crafted cocktails, our bar features an 
-                  extensive selection of beverages to complement your evening.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Food & Bites */}
-            <Card className="group overflow-hidden">
-              <div className="relative">
-                <img 
-                  src={fingerFood} 
-                  alt="Delicious finger foods and appetizers served at our lounge" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent flex items-end p-6">
-                  <div className="text-white">
-                    <h3 className="text-xl font-display font-bold mb-1">
-                      Tasty Bites
-                    </h3>
-                    <p className="opacity-90">
-                      Affordable & delicious
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <p className="text-muted-foreground leading-relaxed">
-                  Our affordable yet classy menu features finger foods and appetizers 
-                  perfect for sharing during hangouts with friends.
-                </p>
-              </CardContent>
-            </Card>
+          {/* Scrollable Bar Gallery */}
+          <div className="mb-16">
+            <Carousel className="w-full max-w-4xl mx-auto">
+              <CarouselContent>
+                {barImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2">
+                    <div className="p-2">
+                      <Card className="group overflow-hidden">
+                        <div className="relative">
+                          <img 
+                            src={image.src} 
+                            alt={image.alt} 
+                            className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent flex items-end p-6">
+                            <div className="text-white">
+                              <h3 className="text-xl font-display font-bold mb-1">
+                                {image.title}
+                              </h3>
+                              <p className="opacity-90">
+                                {image.description}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4" />
+              <CarouselNext className="right-4" />
+            </Carousel>
           </div>
 
           {/* Features Grid */}
