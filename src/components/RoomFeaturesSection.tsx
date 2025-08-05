@@ -13,9 +13,6 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import luxuryRoomBlue from "@/assets/luxury-room-blue.jpg";
 import luxuryRoomGold from "@/assets/luxury-room-gold.jpg";
-import premiumRoom1 from "@/assets/premium-room-1.jpg";
-import premiumRoom2 from "@/assets/premium-room-2.jpg";
-import premiumRoom3 from "@/assets/premium-room-3.jpg";
 
 const RoomFeaturesSection = () => {
   const features = [
@@ -92,19 +89,19 @@ const RoomFeaturesSection = () => {
               <div className="grid grid-cols-2 lg:grid-cols-1 gap-3 lg:h-[600px]">
                 <div className="col-span-2 lg:col-span-1">
                   <img 
-                    src={premiumRoom1} 
+                    src="/lovable-uploads/20c993cd-def2-490d-82b5-bab0971ab04f.png" 
                     alt="Premium room with elegant decor and ambient lighting" 
                     className="w-full h-48 lg:h-40 object-cover rounded-2xl shadow-elegant"
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-3 col-span-2 lg:col-span-1">
                   <img 
-                    src={premiumRoom2} 
+                    src="/lovable-uploads/722131cf-ad91-4e6c-827d-9142b0efdab2.png" 
                     alt="Modern bedroom with blue ambient lighting" 
                     className="w-full h-32 lg:h-36 object-cover rounded-2xl shadow-elegant"
                   />
                   <img 
-                    src={premiumRoom3} 
+                    src="/lovable-uploads/303d7c93-6ca0-4abb-b78d-e27272358c99.png" 
                     alt="Comfortable room with modern amenities" 
                     className="w-full h-32 lg:h-36 object-cover rounded-2xl shadow-elegant"
                   />
