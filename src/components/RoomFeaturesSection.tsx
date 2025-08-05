@@ -11,10 +11,40 @@ import {
   Car
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import luxuryRoomBlue from "@/assets/luxury-room-blue.jpg";
 import luxuryRoomGold from "@/assets/luxury-room-gold.jpg";
 
 const RoomFeaturesSection = () => {
+  const roomImages = [
+    {
+      src: "/lovable-uploads/20c993cd-def2-490d-82b5-bab0971ab04f.png",
+      alt: "Premium room with elegant decor and ambient lighting"
+    },
+    {
+      src: "/lovable-uploads/722131cf-ad91-4e6c-827d-9142b0efdab2.png", 
+      alt: "Modern bedroom with blue ambient lighting"
+    },
+    {
+      src: "/lovable-uploads/303d7c93-6ca0-4abb-b78d-e27272358c99.png",
+      alt: "Comfortable room with modern amenities"
+    },
+    {
+      src: luxuryRoomBlue,
+      alt: "Luxury hotel room with blue ambient lighting"
+    },
+    {
+      src: luxuryRoomGold,
+      alt: "Luxury hotel room with gold accents"
+    }
+  ];
+
   const features = [
     {
       icon: Zap,
@@ -84,41 +114,25 @@ const RoomFeaturesSection = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Premium Room Gallery */}
+            {/* Scrollable Room Gallery */}
             <div className="order-2 lg:order-1">
-              <div className="grid grid-cols-2 lg:grid-cols-1 gap-3 lg:h-[600px]">
-                <div className="col-span-2 lg:col-span-1">
-                  <img 
-                    src="/lovable-uploads/20c993cd-def2-490d-82b5-bab0971ab04f.png" 
-                    alt="Premium room with elegant decor and ambient lighting" 
-                    className="w-full h-48 lg:h-40 object-cover rounded-2xl shadow-elegant"
-                  />
-                </div>
-                <div className="grid grid-cols-2 gap-3 col-span-2 lg:col-span-1">
-                  <img 
-                    src="/lovable-uploads/722131cf-ad91-4e6c-827d-9142b0efdab2.png" 
-                    alt="Modern bedroom with blue ambient lighting" 
-                    className="w-full h-32 lg:h-36 object-cover rounded-2xl shadow-elegant"
-                  />
-                  <img 
-                    src="/lovable-uploads/303d7c93-6ca0-4abb-b78d-e27272358c99.png" 
-                    alt="Comfortable room with modern amenities" 
-                    className="w-full h-32 lg:h-36 object-cover rounded-2xl shadow-elegant"
-                  />
-                </div>
-                <div className="grid grid-cols-2 gap-3 col-span-2 lg:col-span-1">
-                  <img 
-                    src={luxuryRoomBlue} 
-                    alt="Luxury hotel room with blue ambient lighting" 
-                    className="w-full h-32 lg:h-36 object-cover rounded-2xl shadow-elegant"
-                  />
-                  <img 
-                    src={luxuryRoomGold} 
-                    alt="Luxury hotel room with gold accents" 
-                    className="w-full h-32 lg:h-36 object-cover rounded-2xl shadow-elegant"
-                  />
-                </div>
-              </div>
+              <Carousel className="w-full max-w-lg mx-auto">
+                <CarouselContent>
+                  {roomImages.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="p-1">
+                        <img 
+                          src={image.src} 
+                          alt={image.alt} 
+                          className="w-full h-80 object-cover rounded-2xl shadow-elegant"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-4" />
+                <CarouselNext className="right-4" />
+              </Carousel>
             </div>
 
             {/* Features Grid */}

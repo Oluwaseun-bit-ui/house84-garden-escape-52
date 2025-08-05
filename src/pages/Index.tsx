@@ -14,6 +14,7 @@ import ContactSection from "@/components/ContactSection";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => {
+  console.log("Index component rendering");
   return (
     <div className="min-h-screen bg-background">
       {/* Fixed Navbar */}
