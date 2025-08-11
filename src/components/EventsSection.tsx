@@ -1,7 +1,6 @@
 import { Calendar, Heart, Cake, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import eventSetup from "@/assets/event-setup.jpg";
 
 const EventsSection = () => {
   const eventTypes = [
@@ -47,7 +46,7 @@ const EventsSection = () => {
             <div className="order-2 lg:order-1">
               <div className="relative group">
                 <img 
-                  src={eventSetup} 
+                  src="/lovable-uploads/12acfac5-225d-45b6-a453-968b919cdea3.png" 
                   alt="Elegant event setup with purple and white decorations, perfect for special occasions" 
                   className="w-full h-96 lg:h-[500px] object-cover rounded-3xl shadow-elegant group-hover:scale-105 transition-transform duration-500"
                 />
