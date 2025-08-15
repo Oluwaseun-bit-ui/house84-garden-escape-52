@@ -24,8 +24,8 @@ const HeroSection = () => {
           </h1>
 
           {/* Tagline - H2 */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold italic text-gradient-gold">
-            Beyond Pleasure
+          <h2 className="text-xl md:text-2xl font-display font-medium italic text-gradient-gold">
+            ...beyond pleasure
           </h2>
 
           {/* Subtext */}

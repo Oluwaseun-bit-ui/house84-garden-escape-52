@@ -30,8 +30,8 @@ const AboutSection = () => {
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               House 84 Parks & Garden Limited is a multi-concept hospitality brand offering 
-              unique experiences across Lagos. We blend modern comfort with natural beauty, 
-              creating spaces where memories are made and pleasure knows no bounds.
+              unique experiences across Lagos. We blend modern comfort with natural green area, 
+              creating memories where pleasure knows no bounds.
             </p>
           </div>
 
